@@ -41,9 +41,7 @@ public:
         
         return count;
     }
-    void check(queue<pair<int, int>>& curr){
-        
-    }
+   
     
     
 };
