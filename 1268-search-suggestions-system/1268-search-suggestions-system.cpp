@@ -3,7 +3,7 @@ public:
     vector<vector<string>> suggestedProducts(vector<string>& products, string searchWord) {
         int length = searchWord.length();
         int k = length;
-        sort(products.begin(), products.end(), less<string>());
+        sort(products.begin(), products.end());
         vector<vector<string>> ans;
         while(k--){
             vector<string> cycle;
