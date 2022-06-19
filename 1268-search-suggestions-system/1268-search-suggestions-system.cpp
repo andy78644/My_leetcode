@@ -8,16 +8,17 @@ public:
         while(k--){
             vector<string> cycle;
             int number = 0;
+            int record = 0;
             for(int i=0;i<products.size() && number < 3;i++){
                 //int product = check(products[i], searchWord, length-k);
                 for(int j=0;j<length-k;j++){
-                    if(products[i][j]!=searchWord[j]) break;
+                    if(products[i][j]!=searchWord[j]){break; if(number>0) record = 1;}
                     else if(j == length-k-1){
                         cycle.push_back(products[i]); 
                         number++;
                     }
                 }  
-                
+                if(record==1) break;              
             }
             ans.push_back(cycle);
             //cycle.swap();
