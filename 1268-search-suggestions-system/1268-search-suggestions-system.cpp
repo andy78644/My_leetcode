@@ -21,7 +21,7 @@ public:
             }
             ans.push_back(cycle);
             //cycle.swap();
-            vector<string>().swap(cycle);
+            //vector<string>().swap(cycle);
         }
         return ans;
     }
