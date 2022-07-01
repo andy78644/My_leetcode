@@ -14,7 +14,6 @@ public:
         while(truckSize-- && size<amount.size()){
             ans += amount[size];
             size++;
-            
         }
         return ans;
     }
