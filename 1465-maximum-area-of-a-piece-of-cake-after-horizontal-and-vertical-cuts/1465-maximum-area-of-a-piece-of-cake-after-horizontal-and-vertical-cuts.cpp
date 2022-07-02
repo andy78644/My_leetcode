@@ -23,7 +23,7 @@ public:
         max = w-verticalCuts[verticalCuts.size()-1];
         vertimax = (vertimax>=max)?vertimax:max;
         //cout << vertimax << horimax;
-        return ((horimax)*(vertimax))%(1000000007);
+        return ((horimax%(1000000007))*(vertimax%(1000000007)))%(1000000007);
         //horidiff.push_back(horizontalCuts[0]);
         //vertidiff.push_back(verticalCuts[0]);
     }
