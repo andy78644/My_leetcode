@@ -6,8 +6,8 @@ public:
         //vertidiff.push_back(verticalCuts[0]);
         sort(horizontalCuts.begin(),horizontalCuts.end());
         sort(verticalCuts.begin(),verticalCuts.end());
-        long int horimax = max(horizontalCuts[0], h-horizontalCuts[horizontalCuts.size()-1]);
-        long int vertimax = max(verticalCuts[0], w-verticalCuts[verticalCuts.size()-1]);
+        auto horimax = max(horizontalCuts[0], h-horizontalCuts[horizontalCuts.size()-1]);
+        auto vertimax = max(verticalCuts[0], w-verticalCuts[verticalCuts.size()-1]);
         
         for(int i=0;i<horizontalCuts.size()-1;i++){
             int max = horizontalCuts[i+1] - horizontalCuts[i];
@@ -23,7 +23,7 @@ public:
         //max = w-verticalCuts[verticalCuts.size()-1];
         //vertimax = (vertimax>=max)?vertimax:max;
         //cout << vertimax << horimax;
-        return ((horimax%(1000000007))*(vertimax%(1000000007)))%(1000000007);
+        return ((long)(horimax%(1000000007))*(vertimax%(1000000007)))%(1000000007);
         //horidiff.push_back(horizontalCuts[0]);
         //vertidiff.push_back(verticalCuts[0]);
     }
