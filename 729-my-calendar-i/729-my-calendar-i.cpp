@@ -5,8 +5,8 @@ public:
     }
     
     bool book(int start, int end) {
-        for(int i=0;i< booked.size();i++){
-            if(max(booked[i].first, start) < min(booked[i].second, end)) return false;
+        for(pair<int, int> b: booked){
+            if(max(b.first, start) < min(b.second, end)) return false;
         }
         booked.push_back(make_pair(start,end));
         return true;
