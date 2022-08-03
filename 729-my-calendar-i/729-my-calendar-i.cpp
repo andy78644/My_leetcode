@@ -6,9 +6,7 @@ public:
     
     bool book(int start, int end) {
         for(int i=0;i< booked.size();i++){
-            if(start >= booked[i].first && start < booked[i].second) return false;
-            else if(end > booked[i].first && end < booked[i].second) return false;
-            else if(start<booked[i].first && end>=booked[i].second) return false;
+            if(max(booked[i].first, start) < min(booked[i].second, end)) return false;
         }
         booked.push_back(make_pair(start,end));
         return true;
@@ -22,3 +20,16 @@ private:
  * MyCalendar* obj = new MyCalendar();
  * bool param_1 = obj->book(start,end);
  */
+/*
+
+start min max end
+min start end max
+min start max end
+start min end max
+
+start end min max
+min max start end
+
+
+
+*/
