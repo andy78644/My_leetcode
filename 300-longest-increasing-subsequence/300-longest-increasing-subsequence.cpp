@@ -9,8 +9,9 @@ public:
                 }
             }
         }
-        sort(ans.begin(), ans.end());
-        return ans[ans.size()-1];
+        //sort(ans.begin(), ans.end());
+        vector<int>::iterator result = max_element(ans.begin(), ans.end());
+        return *result;
     }
 };
 
