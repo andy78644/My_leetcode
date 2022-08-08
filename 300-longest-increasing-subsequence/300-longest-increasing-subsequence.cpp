@@ -2,7 +2,8 @@ class Solution {
 public:
     int lengthOfLIS(vector<int>& nums) {
         vector<int> ans(nums.size(), 1);
-        for(int i = 0;i < ans.size();i++){
+        int size = ans.size();
+        for(int i = 0;i < size;i++){
             for(int j = 0;j < i;j++){
                 if(nums[i] > nums[j]){
                     ans[i] = max(ans[j]+1, ans[i]);
