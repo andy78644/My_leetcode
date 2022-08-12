@@ -19,6 +19,6 @@ public:
         if(left) return left;
         else if(right) return right;
         else return NULL;
-        //return !left?:!right?:
+        return left?left:right?right:NULL;
     }
 };
