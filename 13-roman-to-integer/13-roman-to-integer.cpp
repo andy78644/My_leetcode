@@ -11,11 +11,15 @@ public:
             {'D', 500},
             {'M', 1000}
         }; 
+        vector<int> ss;
+        for(int i=0;i<s.length();i++){
+            ss.push_back(check[s[i]]);
+        }
         for(int i=0;i<s.length()-1;i++){
-            if(check[s[i]] < check[s[i+1]]){
-                ans -= check[s[i]];
+            if(ss[i] < ss[i+1]){
+                ans -= ss[i];
             }
-            else ans+= check[s[i]];
+            else ans+= ss[i];
         }
         ans += check[s[s.length()-1]];
         return ans;
