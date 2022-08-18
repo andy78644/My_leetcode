@@ -4,8 +4,9 @@ public:
         map<int, int> check;
         int size = arr.size()/2;
         for(auto i: arr){
-            if(check[i]==0) check[i] = 1;
-            else check[i]++;
+            //if(check[i]==0) check[i] = 1;
+            //else check[i]++;
+            check[i]++;
         }
         //cout << check[3];
         vector<int> tmp;
