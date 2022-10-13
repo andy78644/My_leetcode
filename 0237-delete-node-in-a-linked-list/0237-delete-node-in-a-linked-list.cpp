@@ -12,6 +12,7 @@ public:
         auto tmp = node->next;
         *node = *node->next;
         delete tmp;
+        tmp = nullptr;
     }
 };
 
