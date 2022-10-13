@@ -9,7 +9,9 @@
 class Solution {
 public:
     void deleteNode(ListNode* node) {
+        auto tmp = node->next;
         *node = *node->next;
+        delete tmp;
     }
 };
 
